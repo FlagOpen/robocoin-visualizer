@@ -497,6 +497,51 @@ export class EventHandlers {
                 this.managers.selectionPanel.copyCode();
             });
         }
+        
+        // Code detail button toggle
+        const codeDetailBtn = document.getElementById('codeDetailBtn');
+        const codeDetailPanel = document.getElementById('codeDetailPanel');
+        if (codeDetailBtn && codeDetailPanel) {
+            const codeDetailContent = codeDetailPanel.querySelector('.code-detail-content');
+            
+            // Load content from CSS variable
+            const loadDetailContent = () => {
+                const computedStyle = getComputedStyle(document.documentElement);
+                const tooltipText = computedStyle.getPropertyValue('--code-detail-tooltip-text').trim();
+                // Remove quotes if present
+                let cleanText = tooltipText.replace(/^["']|["']$/g, '');
+                // Convert \n to actual newlines for display
+                cleanText = cleanText.replace(/\\n/g, '\n');
+                if (codeDetailContent) {
+                    codeDetailContent.textContent = cleanText;
+                }
+            };
+            
+            loadDetailContent();
+            
+            codeDetailBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isExpanded = codeDetailPanel.classList.contains('expanded');
+                
+                if (isExpanded) {
+                    codeDetailPanel.classList.remove('expanded');
+                    codeDetailBtn.classList.remove('active');
+                } else {
+                    codeDetailPanel.classList.add('expanded');
+                    codeDetailBtn.classList.add('active');
+                }
+            });
+            
+            // Close panel when clicking outside
+            document.addEventListener('click', (e) => {
+                if (codeDetailPanel.classList.contains('expanded') && 
+                    !codeDetailPanel.contains(e.target) && 
+                    !codeDetailBtn.contains(e.target)) {
+                    codeDetailPanel.classList.remove('expanded');
+                    codeDetailBtn.classList.remove('active');
+                }
+            });
+        }
     }
     
     /**

@@ -85,7 +85,7 @@
     --tooltip-delay: 300ms;
     
     /* Code Detail Button Tooltip Text */
-    --code-detail-tooltip-text: "NOTICE: to use this download code, please use git repo:\n https://github.com/FlagOpen/robocoin-lerobot";
+    --code-detail-tooltip-text: "NOTICE: need to specify the target path with arg --target-dir \n to use this download code, please use git repo:\n https://github.com/FlagOpen/robocoin-lerobot \n clone the repo and install the packages";
     
     /* ==================== Responsive Layout Breakpoints ==================== */
     --breakpoint-small: 600px;
