@@ -62,6 +62,13 @@ export class EventHandlers {
                 this.managers.ui.openFilterDropdown();
                 // Initialize tooltips when dropdown opens
                 this.managers.filter.initializeTooltips();
+                // Focus search input when dropdown opens
+                setTimeout(() => {
+                    const searchInput = document.getElementById('filterFinderInput');
+                    if (searchInput) {
+                        searchInput.focus();
+                    }
+                }, 100);
             });
         }
         
@@ -69,6 +76,12 @@ export class EventHandlers {
             filterDropdownClose.addEventListener('click', () => {
                 this.managers.ui.closeFilterDropdown();
                 this.managers.filter.hideTooltip();
+                // Clear search when closing
+                const searchInput = document.getElementById('filterFinderInput');
+                if (searchInput) {
+                    searchInput.value = '';
+                    this.managers.filter.clearFilterSearch();
+                }
             });
         }
         
@@ -77,9 +90,18 @@ export class EventHandlers {
                 if (e.target.id === 'filterDropdownOverlay') {
                     this.managers.ui.closeFilterDropdown();
                     this.managers.filter.hideTooltip();
+                    // Clear search when closing
+                    const searchInput = document.getElementById('filterFinderInput');
+                    if (searchInput) {
+                        searchInput.value = '';
+                        this.managers.filter.clearFilterSearch();
+                    }
                 }
             });
         }
+        
+        // Filter finder (search) events
+        this.bindFilterFinderEvents();
         
         // Reset filters button
         const resetFiltersBtn = document.getElementById('resetFiltersBtn');
@@ -101,6 +123,97 @@ export class EventHandlers {
         
         // Quick-action buttons and tooltips (event delegation)
         this.bindFilterDropdownEvents();
+    }
+    
+    /**
+     * Bind filter finder (search) events
+     */
+    bindFilterFinderEvents() {
+        const filterFinderInput = document.getElementById('filterFinderInput');
+        const filterFinderPrev = document.getElementById('filterFinderPrev');
+        const filterFinderNext = document.getElementById('filterFinderNext');
+        
+        if (!filterFinderInput) return;
+        
+        // Search input event
+        filterFinderInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            this.managers.filter.searchFilterOptions(query);
+        });
+        
+        // Previous/Next button events
+        if (filterFinderPrev) {
+            filterFinderPrev.addEventListener('click', () => {
+                this.managers.filter.navigateFilterMatch('prev');
+            });
+        }
+        
+        if (filterFinderNext) {
+            filterFinderNext.addEventListener('click', () => {
+                this.managers.filter.navigateFilterMatch('next');
+            });
+        }
+        
+        // Keyboard shortcuts
+        filterFinderInput.addEventListener('keydown', (e) => {
+            // Escape: clear search
+            if (e.key === 'Escape') {
+                filterFinderInput.value = '';
+                this.managers.filter.clearFilterSearch();
+                filterFinderInput.blur();
+                return;
+            }
+            
+            // Arrow keys: navigate matches
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (filterFinderInput.value.trim()) {
+                    this.managers.filter.navigateFilterMatch('prev');
+                }
+                return;
+            }
+            
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (filterFinderInput.value.trim()) {
+                    this.managers.filter.navigateFilterMatch('next');
+                }
+                return;
+            }
+            
+            // Enter: select current match or navigate to next
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const query = filterFinderInput.value.trim();
+                if (!query) return;
+                
+                const currentMatch = this.managers.filter.filterFinderMatches[this.managers.filter.filterFinderCurrentIndex];
+                if (currentMatch && currentMatch.element) {
+                    const option = currentMatch.element;
+                    const filterKey = option.dataset.filter;
+                    const filterValue = option.dataset.value;
+                    if (filterKey && filterValue) {
+                        const label = option.querySelector('.filter-option-label')?.textContent?.trim() || filterValue;
+                        this.managers.filter.toggleFilterSelection(filterKey, filterValue, label, option);
+                    }
+                }
+                return;
+            }
+        });
+        
+        // Global Ctrl+F / Cmd+F shortcut to focus search
+        document.addEventListener('keydown', (e) => {
+            // Check if filter dropdown is open
+            const overlay = document.getElementById('filterDropdownOverlay');
+            if (!overlay || !overlay.classList.contains('active')) return;
+            
+            // Ctrl+F or Cmd+F
+            if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+                e.preventDefault();
+                filterFinderInput.focus();
+                filterFinderInput.select();
+            }
+        });
     }
     
     /**

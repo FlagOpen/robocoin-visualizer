@@ -496,30 +496,68 @@ export class FilterManager {
     searchFilterOptions(query) {
         this.clearFilterSearch();
         
-        if (!query) {
-            this.updateFilterFinderUI();
-            return;
-        }
-        
         const filterContent = document.getElementById('filterGroups');
         if (!filterContent) return;
         
         const allOptions = filterContent.querySelectorAll('.filter-option');
+        const allWrappers = filterContent.querySelectorAll('.filter-option-wrapper');
         this.filterFinderMatches = [];
         
+        if (!query) {
+            // Show all options when query is empty
+            allWrappers.forEach(wrapper => {
+                wrapper.classList.remove('filter-search-hidden');
+            });
+            this.updateFilterFinderUI();
+            return;
+        }
+        
+        const queryLower = query.toLowerCase();
+        
+        // First pass: find all matching options
         allOptions.forEach(option => {
             const labelElement = option.querySelector('.filter-option-label, .hierarchy-label');
             if (!labelElement) return;
             
             const text = labelElement.textContent.trim();
+            const matches = text.toLowerCase().includes(queryLower);
             
-            if (text.toLowerCase().includes(query.toLowerCase())) {
+            if (matches) {
                 option.classList.add('highlight-match');
                 this.filterFinderMatches.push({
                     element: option,
                     text: text,
                     wrapper: option.closest('.filter-option-wrapper')
                 });
+            }
+        });
+        
+        // Second pass: hide/show wrappers based on matches
+        // Show wrapper if it or any of its descendants match
+        allWrappers.forEach(wrapper => {
+            const hasMatch = wrapper.querySelector('.highlight-match') !== null;
+            const hasMatchingDescendant = Array.from(wrapper.querySelectorAll('.filter-option-wrapper')).some(
+                child => child.querySelector('.highlight-match') !== null
+            );
+            
+            if (hasMatch || hasMatchingDescendant) {
+                wrapper.classList.remove('filter-search-hidden');
+                // Expand parent collapsed items to show matches
+                let parent = wrapper.parentElement?.closest('.filter-children');
+                while (parent) {
+                    if (parent.classList.contains('collapsed')) {
+                        parent.classList.remove('collapsed');
+                    }
+                    parent = parent.parentElement?.closest('.filter-children');
+                }
+                // Expand filter group
+                const filterGroup = wrapper.closest('.filter-group');
+                if (filterGroup && filterGroup.classList.contains('collapsed')) {
+                    filterGroup.classList.remove('collapsed');
+                }
+            } else {
+                // Hide wrapper if it doesn't match and has no matching descendants
+                wrapper.classList.add('filter-search-hidden');
             }
         });
         
@@ -598,6 +636,11 @@ export class FilterManager {
     clearFilterSearch() {
         document.querySelectorAll('.filter-option.highlight-match').forEach(el => {
             el.classList.remove('highlight-match', 'current-match');
+        });
+        
+        // Show all wrappers
+        document.querySelectorAll('.filter-option-wrapper.filter-search-hidden').forEach(wrapper => {
+            wrapper.classList.remove('filter-search-hidden');
         });
         
         this.filterFinderMatches = [];

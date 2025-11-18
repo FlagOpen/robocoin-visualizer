@@ -82,6 +82,19 @@
         <div class="filter-dropdown" id="filterDropdown">
             <div class="filter-dropdown-header">
                 <h3 class="filter-dropdown-title">🔍 Filter Datasets</h3>
+                <div class="filter-finder">
+                    <input type="text" 
+                           id="filterFinderInput" 
+                           class="filter-finder-input" 
+                           placeholder="Search filter options... (Ctrl+F)"
+                           autocomplete="off"
+                           spellcheck="false">
+                    <div class="filter-finder-nav">
+                        <button class="filter-finder-btn" id="filterFinderPrev" title="Previous match (↑)" disabled>↑</button>
+                        <button class="filter-finder-btn" id="filterFinderNext" title="Next match (↓)" disabled>↓</button>
+                        <span class="filter-finder-count" id="filterFinderCount">0/0</span>
+                    </div>
+                </div>
             </div>
             <div class="filter-dropdown-content" id="filterGroups"></div>
             <div class="filter-dropdown-footer">
