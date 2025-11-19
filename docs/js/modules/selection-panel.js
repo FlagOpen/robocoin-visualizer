@@ -192,7 +192,7 @@ export class SelectionPanelManager {
             const dsListContent = this._sortedPathsCache.join(' \\\n');
             
             requestAnimationFrame(() => {
-                output.textContent = `python -m lerobot.scripts.download \\\n--hub ${this.currentHub} \\\n--ds_lists ${dsListContent} \\\n--target-dir /Downloads`;
+                output.textContent = `python -m lerobot.scripts.download \\\n--hub ${this.currentHub} \\\n--ds_lists ${dsListContent} \\\n--target-dir `;
             });
         }, 100);
     }
@@ -229,7 +229,11 @@ export class SelectionPanelManager {
      * Export selection as JSON file
      */
     exportSelection() {
-        const blob = new Blob([JSON.stringify(Array.from(this.listDatasets), null, 2)], { type: 'application/json' });
+        const pathsWithPrefix = Array.from(this.listDatasets).map(path => {
+            // 如果路径已经以 RoboCOIN/ 开头，则不重复添加
+            return path.startsWith('RoboCOIN/') ? path : `RoboCOIN/${path}`;
+        });
+        const blob = new Blob([JSON.stringify(pathsWithPrefix, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
@@ -264,9 +268,15 @@ export class SelectionPanelManager {
                 let invalidCount = 0;
                 
                 imported.forEach(path => {
-                    const exists = allDatasets.some(ds => ds.path === path);
+                    // 去掉 RoboCOIN/ 前缀（如果存在）以兼容导入的文件
+                    let normalizedPath = path;
+                    if (typeof path === 'string' && path.startsWith('RoboCOIN/')) {
+                        normalizedPath = path.substring('RoboCOIN/'.length);
+                    }
+                    
+                    const exists = allDatasets.some(ds => ds.path === normalizedPath);
                     if (exists) {
-                        this.listDatasets.add(path);
+                        this.listDatasets.add(normalizedPath);
                         validCount++;
                     } else {
                         invalidCount++;
