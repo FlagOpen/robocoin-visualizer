@@ -85,7 +85,8 @@
     --tooltip-delay: 300ms;
     
     /* Code Detail Button Tooltip Text */
-    --code-detail-tooltip-text: "# to use this command, please clone https://github.com/FlagOpen/RoboCOIN/tree/feat/downloader\n the default download path is ~/.cache/huggingface/lerobot/, if you want to speicifiy download dir, please add \n# --target-dir YOUR_DOWNLOAD_DIR"
+    --code-detail-tooltip-text: "# to use this command, please clone https://github.com/FlagOpen/RoboCOIN/tree/feat/downloader\n the default download path is ~/.cache/huggingface/lerobot/, if you want to speicifiy download dir, please add \n# --target-dir YOUR_DOWNLOAD_DIR";
+    
     /* ==================== Responsive Layout Breakpoints ==================== */
     --breakpoint-small: 600px;
     --breakpoint-medium: 900px;
