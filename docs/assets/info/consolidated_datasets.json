@@ -6346,9 +6346,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "ruantong_a2d"
-    ],
+    "device_model": "Tianqin_A2",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_zip_up_the_document_bag": {
@@ -15474,9 +15472,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "ruantong_a2d"
-    ],
+    "device_model": "Tianqin_A2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_prepare_breakfast": {

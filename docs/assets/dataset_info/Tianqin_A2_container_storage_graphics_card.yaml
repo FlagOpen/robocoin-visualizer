@@ -34,6 +34,5 @@ objects:
   level4: null
   level5: null
 -operation_platform_height: null
-device_model:
-- ruantong_a2d
+device_model: Tianqin_A2
 end_effector_type: two_finger_gripper
