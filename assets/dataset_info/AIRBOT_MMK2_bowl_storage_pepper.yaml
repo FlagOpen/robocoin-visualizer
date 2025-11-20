@@ -1,0 +1,40 @@
+dataset_name: bowl_storage_pepper
+dataset_uuid: null
+task_descriptions:
+- with the right hand, the person threw the chili peppers into the blue bowl.
+- put the pumpkin into the large white bowl with your left hand. give space to your
+  left hand with your right hand.
+- put the small bowl into the large one with your left hand, and give space to your
+  left hand with your right hand.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: chili_pepper
+  level1: vegetables
+  level2: chili_pepper
+  level3: null
+  level4: null
+  level5: null
+- object_name: bowl
+  level1: container
+  level2: bowl
+  level4: null
+  level5: null
+- object_name: pumpkin
+  level1: vegetables
+  level2: pumpkin
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

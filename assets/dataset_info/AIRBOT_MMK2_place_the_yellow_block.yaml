@@ -1,0 +1,33 @@
+dataset_name: place_the_yellow_block
+dataset_uuid: null
+task_descriptions:
+- place the yellow square on the table onto the rubik's cube with your left hand,
+  and use your right hand to take the yellow square from the rubik's cube to the table.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- lower
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: square
+  level1: toy
+  level2: square
+  level3: null
+  level4: null
+  level5: null
+- object_name: rubiks_cube
+  level1: toy
+  level2: rubiks_cube
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

@@ -1,0 +1,38 @@
+dataset_name: plug_the_socket
+dataset_uuid: null
+task_descriptions:
+- plug in mosquito repellent then unplug and place on table.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: mosquito_repellent_liquid
+  level1: daily_necessities
+  level2: mosquito_repellent_liquid
+  level3: null
+  level4: null
+  level5: null
+- object_name: plug
+  level1: electric_appliance
+  level2: plug
+  level3: null
+  level4: null
+  level5: null
+- object_name: socket
+  level1: electric_appliance
+  level2: socket
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: R1_Lite
+end_effector_type: two_finger_gripper

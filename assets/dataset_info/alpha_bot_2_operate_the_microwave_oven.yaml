@@ -1,0 +1,27 @@
+dataset_name: operate_the_microwave_oven
+task_descriptions:
+- set the temperature of the microwave oven and turn it on. Open the door of the microwave
+  oven and then close it.
+scene_type:
+- home
+atomic_actions:
+- pullapart
+- pushtogether
+- turn
+objects:
+- object_name: microwave_oven
+  level1: kitchenware
+  level2: microwave_oven
+  level3: null
+  level4: null
+  level5: null
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: alpha_bot_2
+end_effector_type: two_finger_gripper
+dataset_uuid: null

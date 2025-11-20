@@ -1,0 +1,41 @@
+dataset_name: stacking_blocks
+dataset_uuid: null
+task_descriptions:
+- use your left hand to move the large block on the left side to the center, and use
+  your right hand to stack the small blocks on top of the large block.
+- use your left hand to pick up a block from the table and place it on the blocks.
+  use your right hand to pick up another block from the table and place it on the
+  blocks.
+- use your left hand to pick up the blue cube from the left side of the table and
+  place it on top of the yellow cube in the middle of the table. use your right hand
+  to pick up the green cube from the right side of the table and place it on top of
+  the blue cube.
+- pick up the blue cube from the table with your left hand and place it on the small
+  table. then, pick up the red cube from the table with your right hand and place
+  it on top of the blue cube.
+- use your left hand to pick up the red rectangular block on the left side of the
+  table and place it in the center of the table. use your right hand to pick up the
+  blue hexagonal wooden block on the right side of the table and place it on top of
+  the red rectangular block.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: building_block
+  level1: toy
+  level2: building_block
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

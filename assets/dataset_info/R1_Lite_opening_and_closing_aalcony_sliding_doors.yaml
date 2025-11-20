@@ -1,0 +1,20 @@
+dataset_name: opening_and_closing_sliding_doors
+dataset_uuid: null
+task_descriptions:
+- close balcony sliding door then open it.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- push
+- pull
+objects:
+- object_name: sliding_door
+  level1: furniture
+  level2: sliding_door
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: R1_Lite
+end_effector_type: two_finger_gripper

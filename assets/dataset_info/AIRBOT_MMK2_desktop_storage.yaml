@@ -1,0 +1,45 @@
+dataset_name: desktop_storage
+dataset_uuid: null
+task_descriptions:
+- stack the mouse box on top of the computer box with your left hand and place the
+  coffee cup on the plate with your right hand.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: mouse_box
+  level1: container
+  level2: mouse_box
+  level3: null
+  level4: null
+  level5: null
+- object_name: computer_box
+  level1: container
+  level2: computer_box
+  level3: null
+  level4: null
+  level5: null
+- object_name: coffee_cup
+  level1: container
+  level2: coffee_cup
+  level3: null
+  level4: null
+  level5: null
+- object_name: palte
+  level1: container
+  level2: plate
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

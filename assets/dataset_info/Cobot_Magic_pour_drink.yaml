@@ -1,0 +1,178 @@
+dataset_name: pour_drink
+dataset_uuid: null
+task_descriptions:
+- fill the black mug completely with NFC orange juice.
+- pour half of the NFC orange juice into the black mug.
+- pour three quarters of the NFC orange juice into the black mug.
+- pour quarter of the NFC orange juice into the black mug.
+- fill the paper cup completely with NFC orange juice.
+- pour half of the NFC orange juice into the paper cup.
+- pour three quarters of the NFC orange juice into the paper cup.
+- pour quarter of the NFC orange juice into the paper cup.
+- fill the transparent cup completely with NFC orange juice.
+- pour half of the NFC orange juice into the transparent cup.
+- pour three quarters of the NFC orange juice into the transparent cup.
+- pour quarter of the NFC orange juice into the transparent cup.
+- fill the black mug completely with red wine.
+- pour half of the red wine into the black mug.
+- pour three quarters of the red wine into the black mug.
+- pour quarter of the red wine into the black mug.
+- fill the paper cup completely with red wine.
+- pour half of the red wine into the paper cup.
+- pour three quarters of the red wine into the paper cup.
+- pour quarter of the red wine into the paper cup.
+- fill the transparent cup completely with red wine.
+- pour half of the red wine into the transparent cup.
+- pour three quarters of the red wine into the transparent cup.
+- pour quarter of the red wine into the transparent cup.
+- fill the black mug completely with sprite.
+- pour half of the sprite into the black mug.
+- pour three quarters of the sprite into the black mug.
+- pour quarter of the sprite into the black mug.
+- fill the paper cup completely with sprite.
+- pour half of the sprite into the paper cup.
+- pour three quarters of the sprite into the paper cup.
+- pour quarter of the sprite into the paper cup.
+- fill the transparent cup completely with sprite.
+- pour half of the sprite into the transparent cup.
+- pour three quarters of the sprite into the transparent cup.
+- pour quarter of the sprite into the transparent cup.
+- pour the cestbon into the black cup.
+- pour the cestbon into the gray cup.
+- pour the cestbon into the red cup.
+- pour the cestbon into the white cup.
+- pour the cestbon into the yellow cup.
+- pour the coffee into the black cup.
+- pour the coffee into the gray cup.
+- pour the coffee into the red cup.
+- pour the coffee into the white cup.
+- pour the coffee into the yellow cup.
+- pour the cola into the black cup.
+- pour the cola into the gray cup.
+- pour the cola into the red cup.
+- pour the cola into the white cup.
+- pour the cola into the yellow cup.
+- pour the milk into the black cup.
+- pour the milk into the gray cup.
+- pour the milk into the red cup.
+- pour the milk into the white cup.
+- pour the milk into the yellow cup.
+- pour the sprite into the black cup.
+- pour the sprite into the gray cup.
+- pour the sprite into the red cup.
+- pour the sprite into the white cup.
+- pour the sprite into the yellow cup.
+- pour the cestbon onto the black tablecloth into the black cup.
+- pour the cestbon onto the black tablecloth into the grey cup.
+- pour the cestbon onto the black tablecloth into the red cup.
+- pour the cestbon onto the black tablecloth into the white cup.
+- pour the cestbon onto the black tablecloth into the yellow cup.
+- pour the coffee onto the black tablecloth into the black cup.
+- pour the coffee onto the black tablecloth into the grey cup.
+- pour the coffee onto the black tablecloth into the red cup.
+- pour the coffee onto the black tablecloth into the white cup.
+- pour the coffee onto the black tablecloth into the yellow cup.
+- pour the cola into the black cup on the black tablecloth.
+- pour the cola into the grey cup on the black tablecloth.
+- pour the cola into the red cup on the black tablecloth.
+- pour the cola into the white cup on the black tablecloth.
+- pour the cola into the yellow cup on the black tablecloth.
+- pour the milk onto the black tablecloth into the black cup.
+- pour the milk onto the black tablecloth into the grey cup.
+- pour the milk onto the black tablecloth into the red cup.
+- pour the milk onto the black tablecloth into the white cup.
+- pour the milk onto the black tablecloth into the yellow cup.
+- pour sprite into a black cup on a black tablecloth.
+- pour sprite into a black cup on a grey tablecloth.
+- pour sprite into a black cup on a red tablecloth.
+- pour sprite into a black cup on a white tablecloth.
+- pour sprite into a black cup on a yellow tablecloth.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+- pour
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: NFC_orange_juice
+  level1: drink
+  level2: NFC_orange_juice
+  level3: null
+  level4: null
+  level5: null
+- object_name: red_wine
+  level1: drink
+  level2: red_wine
+  level3: null
+  level4: null
+  level5: null
+- object_name: sprite
+  level1: drink
+  level2: sprite
+  level3: null
+  level4: null
+  level5: null
+- object_name: black_mug
+  level1: container
+  level2: black_mug
+  level3: null
+  level4: null
+  level5: null
+- object_name: paper_cup
+  level1: container
+  level2: paper_cup
+  level3: null
+  level4: null
+  level5: null
+- object_name: transparent_cup
+  level1: container
+  level2: transparent_cup
+  level3: null
+  level4: null
+  level5: null
+- object_name: tablecloth
+  level1: clothing
+  level2: tablecloth
+  level3: null
+  level4: null
+  level5: null
+- object_name: cestbon
+  level1: drink
+  level2: cestbon
+  level3: null
+  level4: null
+  level5: null
+- object_name: coffee
+  level1: drink
+  level2: coffee
+  level3: null
+  level4: null
+  level5: null
+- object_name: cola
+  level1: drink
+  level2: cola
+  level3: null
+  level4: null
+  level5: null
+- object_name: milk
+  level1: drink
+  level2: milk
+  level3: null
+  level4: null
+  level5: null
+- object_name: cup
+  level1: container
+  level2: cup
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper

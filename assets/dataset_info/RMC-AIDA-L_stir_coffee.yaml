@@ -1,0 +1,57 @@
+dataset_name: stir_coffee
+dataset_uuid: null
+task_descriptions:
+- move the grey cup to the center with your right hand, lift the blue spoon with your
+  left hand and stir it three times in the cup, put the spoon into the cup.
+- move the grey cup to the center with your left hand, lift the blue spoon with your
+  right hand and stir it three times in the cup, put the spoon into the cup.
+- move the grey cup to the center with your right hand, lift the pink spoon with your
+  left hand and stir it three times in the cup, put the spoon into the cup.
+- move the grey cup to the center with your left hand, lift the pink spoon with your
+  right hand and stir it three times in the cup, put the spoon into the cup.
+- move the red cup to the center with your right hand, lift the blue spoon with your
+  left hand and stir it three times in the cup, put the spoon into the cup.
+- move the red cup to the center with your left hand, lift the blue spoon with your
+  right hand and stir it three times in the cup, put the spoon into the cup.
+- move the red cup to the center with your right hand, lift the pink spoon with your
+  left hand and stir it three times in the cup, put the spoon into the cup.
+- move the red cup to the center with your left hand, lift the pink spoon with your
+  right hand and stir it three times in the cup, put the spoon into the cup.
+scene_type:
+- home
+- office
+- cafe
+atomic_actions:
+- grasp
+- take
+- put
+- move
+- stir
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: cup
+  level1: tableware
+  level2: cup
+  level3: null
+  level4: null
+  level5: null
+- object_name: spoon
+  level1: tableware
+  level2: spoon
+  level3: null
+  level4: null
+  level5: null
+- object_name: tablecloth
+  level1: clothing
+  level2: tablecloth
+  level3: null
+  level4: null
+  level5: null
+device_model: RMC-AIDA-L
+end_effector_type: two_finger_gripper
+operation_platform_height: 77.2

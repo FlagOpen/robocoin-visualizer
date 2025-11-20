@@ -1,0 +1,26 @@
+dataset_name: stack_building_blocks
+dataset_uuid: null
+task_descriptions:
+- stack building blocks on the table.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: building_blocks
+  level1: toy
+  level2: building_blocks
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: alpha_bot_2
+end_effector_type: two_finger_gripper

@@ -1,0 +1,27 @@
+dataset_name: item_reversal
+dataset_uuid: null
+task_descriptions:
+- on the white table pick up the cup wit your left hand and hand it to your right
+  hand then turn it over.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: cup
+  level1: container
+  level2: cup
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: alpha_bot_2
+end_effector_type: two_finger_gripper

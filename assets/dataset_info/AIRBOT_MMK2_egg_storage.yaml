@@ -1,0 +1,40 @@
+dataset_name: egg_storage
+dataset_uuid: null
+task_descriptions:
+- put the egg on the left in the bowl with your left hand and the egg on the right
+  in the bowl with your right hand.
+- pick up the egg from the table with your right hand and put it in the egg box.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: bowl
+  level1: container
+  level2: bowl
+  level3: null
+  level4: null
+  level5: null
+- object_name: egg
+  level1: food
+  level2: egg
+  level3: null
+  level4: null
+  level5: null
+- object_name: egg_box
+  level1: food
+  level2: egg_box
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

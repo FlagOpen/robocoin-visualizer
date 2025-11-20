@@ -1,0 +1,77 @@
+dataset_name: scoop_coffee_beans
+dataset_uuid: null
+task_descriptions:
+- the left gripper place the grey cup in the center of the table, the right gripper
+  take the blue spoon from the cup lid and scoop out the coffee beans from the coffee
+  cup and put them into the grey cup, the right gripper put the spoon back into the
+  cup lid.
+- the left gripper place the grey cup in the center of the table, the right gripper
+  take the pink spoon from the cup lid and scoop out the coffee beans from the coffee
+  cup and put them into the grey cup, the right gripper put the spoon back into the
+  cup lid.
+- the right gripper place the grey cup in the center of the table, the left gripper
+  take the blue spoon from the cup lid and scoop out the coffee beans from the coffee
+  cup and put them into the grey cup, the left gripper put the spoon back into the
+  cup lid.
+- the right gripper place the grey cup in the center of the table, the left gripper
+  take the pink spoon from the cup lid and scoop out the coffee beans from the coffee
+  cup and put them into the grey cup, the left gripper put the spoon back into the
+  cup lid.
+- the left gripper place the red cup in the center of the table, the right gripper
+  take the blue spoon from the cup lid and scoop out the coffee beans from the coffee
+  cup and put them into the red cup, the right gripper put the spoon back into the
+  cup lid.
+- the left gripper place the red cup in the center of the table, the right gripper
+  take the pink spoon from the cup lid and scoop out the coffee beans from the coffee
+  cup and put them into the red cup, the right gripper put the spoon back into the
+  cup lid.
+- the right gripper place the red cup in the center of the table, the left gripper
+  take the blue spoon from the cup lid and scoop out the coffee beans from the coffee
+  cup and put them into the red cup, the left gripper put the spoon back into the
+  cup lid.
+- the right gripper place the red cup in the center of the table, the left gripper
+  take the pink spoon from the cup lid and scoop out the coffee beans from the coffee
+  cup and put them into the red cup, the left gripper put the spoon back into the
+  cup lid.
+scene_type:
+- home
+- office
+atomic_actions:
+- scoop
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: cup
+  level1: container
+  level2: cup
+  level3: null
+  level4: null
+  level5: null
+- object_name: cup_lid
+  level1: container
+  level2: cup_lid
+  level3: null
+  level4: null
+  level5: null
+- object_name: spoon
+  level1: tableware
+  level2: spoon
+  level3: null
+  level4: null
+  level5: null
+- object_name: coffee_beans
+  level1: food
+  level2: coffee_beans
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: Split_aloha
+end_effector_type: two_finger_gripper

@@ -1,0 +1,26 @@
+dataset_name: put_the_pillow_on_the_bed
+dataset_uuid: null
+task_descriptions:
+- move pillow from bedside to head then foot of bed.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: pillow
+  level1: daily_necessities
+  level2: pillow
+  level3: null
+  level4: null
+  level5: null
+- object_name: bed
+  level1: furniture
+  level2: bed
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: R1_Lite
+end_effector_type: two_finger_gripper

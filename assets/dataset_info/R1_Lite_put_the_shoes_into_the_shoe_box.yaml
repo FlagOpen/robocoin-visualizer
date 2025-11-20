@@ -1,0 +1,26 @@
+dataset_name: put_the_shoes_into_the_shoe_box
+dataset_uuid: null
+task_descriptions:
+- take shoes out of box then put back in and close.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: shoes
+  level1: clothing
+  level2: shoes
+  level3: null
+  level4: null
+  level5: null
+- object_name: shoe_box
+  level1: container
+  level2: shoe_box
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: R1_Lite
+end_effector_type: two_finger_gripper

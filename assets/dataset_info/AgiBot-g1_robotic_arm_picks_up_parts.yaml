@@ -1,0 +1,32 @@
+dataset_name: robotic_arm_picks_up_parts
+dataset_uuid: null
+task_descriptions:
+- pick up parts and place them into a black container.
+scene_type:
+- factory
+atomic_actions:
+- place
+- pick
+- grasp
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: black_container
+  level1: container
+  level2: black_container
+  level3: null
+  level4: null
+  level5: null
+- object_name: parts
+  level1: tool
+  level2: parts
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: AgiBot-g1
+end_effector_type: two_finger_gripper

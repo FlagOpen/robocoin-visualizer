@@ -1,0 +1,26 @@
+dataset_name: box_storage_e
+dataset_uuid: null
+task_descriptions:
+- place the small box on the table into the large box on the left.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: box
+  level1: container
+  level2: box
+  level3: null
+  level4: null
+  level5: null
+-operation_platform_height: null
+device_model: AgiBot-g1
+end_effector_type: two_finger_gripper

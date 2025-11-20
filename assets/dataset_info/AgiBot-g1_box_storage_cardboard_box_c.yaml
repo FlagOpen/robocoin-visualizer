@@ -1,0 +1,31 @@
+dataset_name: box_storage_cardboard_box_c
+dataset_uuid: null
+task_descriptions:
+- using a robotic arm to pick up a cardboard box and palace it the carton.
+scene_type:
+- home
+atomic_actions:
+- place
+- pick
+- grasp
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: paper_box
+  level1: tool
+  level2: paper_box
+  level4: null
+  level5: null
+- object_name: carton
+  level1: tool
+  level2: carton
+  level3: null
+  level4: null
+  level5: null
+-operation_platform_height: null
+device_model: AgiBot-g1
+end_effector_type: two_finger_gripper

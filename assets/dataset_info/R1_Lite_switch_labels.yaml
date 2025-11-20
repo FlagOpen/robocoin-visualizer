@@ -1,0 +1,32 @@
+dataset_name: switch_labels
+dataset_uuid: null
+task_descriptions:
+- take label off door handle switch sign then put back.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: the_door
+  level1: furniture
+  level2: the_door
+  level3: null
+  level4: null
+  level5: null
+- object_name: door_handle
+  level1: accessories
+  level2: door_handle
+  level3: null
+  level4: null
+  level5: null
+- object_name: tag
+  level1: tools
+  level2: tag
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: R1_Lite
+end_effector_type: two_finger_gripper

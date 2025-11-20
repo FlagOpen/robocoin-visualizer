@@ -1,0 +1,61 @@
+dataset_name: boxs_storage
+dataset_uuid: null
+task_descriptions:
+- put the calculator box in the yellow bucket with your left hand and the power bank
+  box in the yellow bucket with your right hand.
+- throw the pomegranate into the left square with your left hand and the mango into
+  the right square with your right hand.
+- throw the potato into the left square with your left hand and the pumpkin into the
+  right square with your right hand.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: calculator_box
+  level1: container
+  level2: calculator_box
+  level3: null
+  level4: null
+  level5: null
+- object_name: power_bank_box
+  level1: container
+  level2: power_bank_box
+  level3: null
+  level4: null
+  level5: null
+- object_name: bucket
+  level1: container
+  level2: bucket
+  level3: null
+  level4: null
+  level5: null
+- object_name: pomegranate
+  level1: fruit
+  level2: pomegranate
+  level3: null
+  level4: null
+  level5: null
+- object_name: mango
+  level1: fruit
+  level2: mango
+  level3: null
+  level4: null
+  level5: null
+- object_name: potato
+  level1: vegetable
+  level2: potato
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

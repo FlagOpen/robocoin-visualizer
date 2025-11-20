@@ -1,0 +1,40 @@
+dataset_name: move_beverage
+dataset_uuid: null
+task_descriptions:
+- move one drink among three beverages.
+scene_type:
+- supermarket
+- home
+- restaurant
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: fanta
+  level1: drink
+  level2: fanta
+  level3: null
+  level4: null
+  level5: null
+- object_name: sprite
+  level1: drink
+  level2: sprite
+  level3: null
+  level4: null
+  level5: null
+- object_name: cola
+  level1: drink
+  level2: cola
+  level3: null
+  level4: null
+  level5: null
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper
+operation_platform_height: 77.2

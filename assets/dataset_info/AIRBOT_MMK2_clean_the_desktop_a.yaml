@@ -1,0 +1,38 @@
+dataset_name: clean_the_desktop
+dataset_uuid: null
+task_descriptions:
+- place the umbrella and tissues on the white lid.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: umbrella
+  level1: daily_necessities
+  level2: umbrella
+  level3: null
+  level4: null
+  level5: null
+- object_name: tissues
+  level1: daily_necessities
+  level2: tissues
+  level3: null
+  level4: null
+  level5: null
+- object_name: lid
+  level1: container
+  level2: lid
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

@@ -1,0 +1,39 @@
+dataset_name: storage_wet_tissue_and_building_block
+dataset_uuid: null
+task_descriptions:
+- put the wet wipes into the white platform with your left hand, place the arched
+  building blocks into the white platform with your right hand.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: wet_tissue
+  level1: tool
+  level2: wet_tissue
+  level3: null
+  level4: null
+  level5: null
+- object_name: building_block
+  level1: toy
+  level2: building_block
+  level3: null
+  level4: null
+  level5: null
+- object_name: platform
+  level1: container
+  level2: platform
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

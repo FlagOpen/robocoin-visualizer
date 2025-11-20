@@ -1,0 +1,33 @@
+dataset_name: recover_after_touching_an_obstacle
+task_descriptions:
+- return to a safe position after touching an obstacle with your arm on the white
+  table.
+scene_type:
+- home
+atomic_actions:
+- pick
+- grasp
+- null
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: mineral_water
+  level1: drinks
+  level2: mineral_water
+  level3: null
+  level4: null
+  level5: null
+- object_name: button
+  level1: toy
+  level2: button
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: alpha_bot_2
+end_effector_type: two_finger_gripper
+dataset_uuid: null

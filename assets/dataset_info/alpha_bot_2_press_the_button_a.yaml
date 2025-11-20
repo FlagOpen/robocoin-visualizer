@@ -1,0 +1,30 @@
+dataset_name: press_the_button_a
+task_descriptions:
+- after avoiding the water bottle on the table, press the button.
+scene_type:
+- home
+atomic_actions:
+- pressbutton
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: water_bottle
+  level1: container
+  level2: water_bottle
+  level3: null
+  level4: null
+  level5: null
+- object_name: button
+  level1: toy
+  level2: button
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: alpha_bot_2
+end_effector_type: two_finger_gripper
+dataset_uuid: null

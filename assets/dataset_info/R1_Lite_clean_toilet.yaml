@@ -1,0 +1,41 @@
+dataset_name: clean_toilet
+dataset_uuid: null
+task_descriptions:
+- pour toilet cleaner brush toilet flush then close lid.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+- close
+- open
+- press
+objects:
+- object_name: toilet
+  level1: sanitary_ware
+  level2: toilet
+  level3: null
+  level4: null
+  level5: null
+- object_name: toilet_brush
+  level1: tool
+  level2: toilet_brush
+  level3: null
+  level4: null
+  level5: null
+- object_name: toilet_brush_base
+  level1: tool
+  level2: toilet_brush_base
+  level3: null
+  level4: null
+  level5: null
+- object_name: toilet_cleaner
+  level1: daily_necessities
+  level2: toilet_cleaner
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: R1_Lite
+end_effector_type: two_finger_gripper

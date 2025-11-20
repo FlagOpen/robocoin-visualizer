@@ -1,0 +1,32 @@
+dataset_name: put_on_a_garbage_bag
+dataset_uuid: null
+task_descriptions:
+- put new trash bag on can then place ring on it.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: trash_bag
+  level1: container
+  level2: trash_bag
+  level3: null
+  level4: null
+  level5: null
+- object_name: trash_can
+  level1: container
+  level2: trash_can
+  level3: null
+  level4: null
+  level5: null
+- object_name: trash_can_ring
+  level1: daily_necessities
+  level2: trash_can_ring
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: R1_Lite
+end_effector_type: two_finger_gripper

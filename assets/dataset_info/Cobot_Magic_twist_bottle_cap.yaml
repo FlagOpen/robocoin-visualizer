@@ -1,0 +1,66 @@
+dataset_name: twist_bottle_cap
+dataset_uuid: null
+task_descriptions:
+- tighten the cap of the cestbon bottle.
+- loosen the cap of the cestbon bottle.
+- tighten the cap of the green tea bottle.
+- loosen the cap of the green tea bottle.
+- tighten the cap of the master kong oolong tea bottle.
+- loosen the bottle cap of master kang oolong tea.
+- tighten the cap of the meinianda bottle.
+- loosen the cap of the meinianda bottle.
+- tighten the cap of the yili changqing bottle.
+- loosen the cap of the yili changqing bottle.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+- twist
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: bottle
+  level1: container
+  level2: bottle
+  level3: null
+  level4: null
+  level5: null
+- object_name: master_kong_oolong_tea
+  level1: drink
+  level2: master_kong_oolong_tea
+  level3: null
+  level4: null
+  level5: null
+- object_name: green_tea
+  level1: drink
+  level2: green_tea
+  level3: null
+  level4: null
+  level5: null
+- object_name: meinianda
+  level1: drink
+  level2: meinianda
+  level3: null
+  level4: null
+  level5: null
+- object_name: yili_changqing
+  level1: drink
+  level2: yili_changqing
+  level3: null
+  level4: null
+  level5: null
+- object_name: cestbon
+  level1: drink
+  level2: cestbon
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper

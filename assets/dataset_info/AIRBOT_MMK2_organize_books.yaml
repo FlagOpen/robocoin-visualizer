@@ -1,0 +1,32 @@
+dataset_name: organize_books
+dataset_uuid: null
+task_descriptions:
+- pick up the book on the table with the right hand and put it into the bookshelf.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: book
+  level1: office_supplies
+  level2: book
+  level3: null
+  level4: null
+  level5: null
+- object_name: bookshelf
+  level1: container
+  level2: bookshelf
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

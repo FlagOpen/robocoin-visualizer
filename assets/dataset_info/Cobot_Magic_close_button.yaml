@@ -1,0 +1,35 @@
+dataset_name: close_button
+dataset_uuid: null
+task_descriptions:
+- press the button switch with the left gripper to turn off the button.
+- left gripper press grey cloth button switch turn off button.
+- left gripper press cyan cloth button switch turn off button.
+- press the button switch with the right claw to turn off the button.
+- right gripper press grey cloth button switch turn off button.
+- right gripper press cyan cloth button switch turn off button.
+scene_type:
+- home
+atomic_actions:
+- press
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: button
+  level1: electric_appliance
+  level2: button
+  level3: null
+  level4: null
+  level5: null
+- object_name: tablecloth
+  level1: clothing
+  level2: tablecloth
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper

@@ -1,0 +1,36 @@
+dataset_name: storage_item_d
+dataset_uuid: null
+task_descriptions:
+- grasp data cable left put into box grasp mouse right put into box.
+scene_type:
+- factory
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: data_cable
+  level1: tool
+  level2: data_cable
+  level3: null
+  level4: null
+  level5: null
+- object_name: box
+  level1: container
+  level2: box
+  level3: null
+  level4: null
+- object_name: mouse
+  level1: tool
+  level2: mouse
+  level3: null
+  level4: null
+-operation_platform_height: null
+device_model: AgiBot-g1
+end_effector_type: two_finger_gripper

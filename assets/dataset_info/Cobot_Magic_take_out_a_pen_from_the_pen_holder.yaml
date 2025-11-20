@@ -1,0 +1,38 @@
+dataset_name: take_out_a_pen_from_the_pen_holder
+dataset_uuid: null
+task_descriptions:
+- place the pen in the pen holder on the grey table with the left gripper.
+- put the pen in the pen holder on the green table with the left gripper.
+- put the pen in the pen holder on the white table with the left gripper.
+- place the pen in the pen holder on the grey table with the right gripper.
+- put the pen in the pen holder on the green table with the right gripper.
+- put the pen in the pen holder on the white table with the right gripper.
+scene_type:
+- office
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: pen
+  level1: office_supplies
+  level2: pen
+  level3: null
+  level4: null
+  level5: null
+- object_name: pen_holder
+  level1: office_supplies
+  level2: pen_holder
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper

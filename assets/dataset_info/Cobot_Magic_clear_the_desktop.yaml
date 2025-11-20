@@ -1,0 +1,34 @@
+dataset_name: clear_the_desktop
+dataset_uuid: null
+task_descriptions:
+- wipe the coffee stains on the table with a green rag.
+- wipe the coffee stains on the table with a pink rag.
+- wipe the coffee stains on the table with a blue rag.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: rag
+  level1: clothing
+  level2: rag
+  level3: null
+  level4: null
+  level5: null
+- object_name: coffee_stains
+  level1: garbage
+  level2: coffee_stains
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper

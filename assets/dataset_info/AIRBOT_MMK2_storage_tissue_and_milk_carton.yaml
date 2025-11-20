@@ -1,0 +1,39 @@
+dataset_name: storage_tissue_and_milk_carton
+dataset_uuid: null
+task_descriptions:
+- place the tissue paper on the white lid with your left hand, using your right hand,
+  put the milk carton with the straw on top of the white lid.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: tissue_paper
+  level1: daily_necessities
+  level2: tissue_paper
+  level3: null
+  level4: null
+  level5: null
+- object_name: lid
+  level1: container
+  level2: lid
+  level3: null
+  level4: null
+  level5: null
+- object_name: milk_carton
+  level1: container
+  level2: milk_carton
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

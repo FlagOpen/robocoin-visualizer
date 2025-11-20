@@ -1,0 +1,43 @@
+dataset_name: place_the_test_tube
+dataset_uuid: null
+task_descriptions:
+- place the test tube on the test tube rack on the desk.
+- place the test tube on the test tube rack on the green tablecloth.
+- place the test tube on the test tube rack on the grey tablecloth.
+- left gripper passes test tube to right gripper places on test tube holder.
+- on cyan cloth pass tube from right to left gripper place on stand.
+- on white cloth pass tube from right to left gripper place on stand.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: test_tube
+  level1: tool
+  level2: test_tube
+  level3: null
+  level4: null
+  level5: null
+- object_name: test_tube_rack
+  level1: tool
+  level2: test_tube_rack
+  level3: null
+  level4: null
+  level5: null
+- object_name: tablecloth
+  level1: clothing
+  level2: tablecloth
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper

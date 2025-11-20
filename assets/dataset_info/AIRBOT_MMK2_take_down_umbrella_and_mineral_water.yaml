@@ -1,0 +1,76 @@
+dataset_name: take_down_umbrella_and_mineral_water
+dataset_uuid: null
+task_descriptions:
+- use your right hand to take the white umbrella off the white lid then use your left
+  hand to take the mineral water off the white lid.
+- take the vitamin b water off the white cap with your left hand, and then take another
+  vitamin b water off the white cap with your right hand.
+- take out the yellow egg with your right hand.
+- take the two black cakes out of the white box simultaneously with both hands and
+  place them on the table.
+- pick up the blue and green cubes from the lid of the paper box simultaneously with
+  both hands and place them on the table.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: umbrella
+  level1: tool
+  level2: umbrella
+  level3: null
+  level4: null
+  level5: null
+- object_name: mineral_water
+  level1: drink
+  level2: mineral_water
+  level3: null
+  level4: null
+  level5: null
+- object_name: lid
+  level1: container
+  level2: lid
+  level3: null
+  level4: null
+  level5: null
+- object_name: vitamin_b_water
+  level1: beverage
+  level2: vitamin_b_water
+  level3: null
+  level4: null
+  level5: null
+- object_name: egg
+  level1: food
+  level2: egg
+  level3: null
+  level4: null
+  level5: null
+- object_name: cake
+  level1: food
+  level2: cake
+  level3: null
+  level4: null
+  level5: null
+- object_name: box
+  level1: container
+  level2: box
+  level3: null
+  level4: null
+  level5: null
+- object_name: building_blocks
+  level1: toy
+  level2: building_blocks
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: AIRBOT_MMK2
+end_effector_type: two_finger_gripper

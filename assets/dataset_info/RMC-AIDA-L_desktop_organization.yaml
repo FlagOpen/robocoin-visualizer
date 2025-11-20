@@ -1,0 +1,109 @@
+dataset_name: desktop_organization
+dataset_uuid: null
+task_descriptions:
+- put the orange in the fruit plate, put the paper ball in the trash can, stand the
+  bottle upright, put the art knife in the pen holder, put the glue in the pen holder,
+  and put the eraser in the pen holder.
+- put the peach in the fruit plate, put the plastic in the trash can, stand the bottle
+  upright, put the ruler in the pen holder, put the pen in the pen holder, and put
+  the scissor in the pen holder.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: orange
+  level1: fruit
+  level2: orange
+  level3: null
+  level4: null
+  level5: null
+- object_name: peach
+  level1: fruit
+  level2: peach
+  level3: null
+  level4: null
+  level5: null
+- object_name: fruit_plate
+  level1: container
+  level2: fruit_plate
+  level3: null
+  level4: null
+  level5: null
+- object_name: paper_ball
+  level1: garbage
+  level2: paper_ball
+  level3: null
+  level4: null
+  level5: null
+- object_name: plastic
+  level1: garbage
+  level2: plastic
+  level3: null
+  level4: null
+  level5: null
+- object_name: trash_can
+  level1: container
+  level2: trash_can
+  level3: null
+  level4: null
+  level5: null
+- object_name: bottle
+  level1: container
+  level2: bottle
+  level3: null
+  level4: null
+  level5: null
+- object_name: art_knife
+  level1: office_supplies
+  level2: art_knife
+  level3: null
+  level4: null
+  level5: null
+- object_name: glue
+  level1: office_supplies
+  level2: glue
+  level3: null
+  level4: null
+  level5: null
+- object_name: eraser
+  level1: office_supplies
+  level2: eraser
+  level3: null
+  level4: null
+  level5: null
+- object_name: ruler
+  level1: office_supplies
+  level2: ruler
+  level3: null
+  level4: null
+  level5: null
+- object_name: pen
+  level1: office_supplies
+  level2: pen
+  level3: null
+  level4: null
+  level5: null
+- object_name: scissor
+  level1: office_supplies
+  level2: scissor
+  level3: null
+  level4: null
+  level5: null
+- object_name: pen_holder
+  level1: container
+  level2: pen_holder
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: RMC-AIDA-L
+end_effector_type: two_finger_gripper

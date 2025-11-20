@@ -1,0 +1,58 @@
+dataset_name: place_the_fruits_repeatedly
+dataset_uuid: null
+task_descriptions:
+- put the peach into the blue bowl and pour it out repeatedly.
+- put the orange into the blue bowl and pour it out repeatedly.
+- put the egg yolk pastry into the blue bowl and pour it out repeatedly.
+- put the bread into the blue bowl and pour it out repeatedly.
+- put the peach into the pink bowl and pour it out repeatedly.
+- put the orange into the pink bowl and pour it out repeatedly.
+- put the egg yolk pastry into the pink bowl and pour it out repeatedly.
+- put the bread into the pink bowl and pour it out repeatedly.
+scene_type:
+- kitchen
+atomic_actions:
+- grasp
+- place
+- pick
+- pour
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: bowl
+  level1: container
+  level2: bowl
+  level3: null
+  level4: null
+  level5: null
+- object_name: peach
+  level1: fruit
+  level2: peach
+  level3: null
+  level4: null
+  level5: null
+- object_name: orange
+  level1: fruit
+  level2: orange
+  level3: null
+  level4: null
+  level5: null
+- object_name: egg_yolk_pastry
+  level1: food
+  level2: egg_yolk_pastry
+  level3: null
+  level4: null
+  level5: null
+- object_name: bread
+  level1: food
+  level2: bread
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: RMC-AIDA-L
+end_effector_type: two_finger_gripper

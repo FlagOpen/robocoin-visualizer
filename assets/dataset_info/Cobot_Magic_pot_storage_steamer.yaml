@@ -1,0 +1,49 @@
+dataset_name: pot_storage_steamer
+dataset_uuid: null
+task_descriptions:
+- place steamer in pot on blue tablecloth put lid on steamer.
+- place steamer in pot on green tablecloth put lid on steamer.
+- place steamer in pot on grey tablecloth put lid on steamer.
+- place steamer in pot on pink tablecloth put lid on steamer.
+- place steamer in pot on white table put lid on steamer.
+- place steamer in pot on white tablecloth put lid on steamer.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: steamer
+  level1: container
+  level2: steamer
+  level3: null
+  level4: null
+  level5: null
+- object_name: tablecloth
+  level1: clothing
+  level2: tablecloth
+  level3: null
+  level4: null
+  level5: null
+- object_name: pot
+  level1: container
+  level2: pot
+  level3: null
+  level4: null
+  level5: null
+- object_name: lid
+  level1: daily_necessities
+  level2: lid
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: 77.2
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper

@@ -1,0 +1,37 @@
+dataset_name: take_the_shoes_off_the_shelf
+dataset_uuid: null
+task_descriptions:
+- take the shoes off the shelf with your hand from the blue coffee tablecloth.
+- take the shoes off the shelf from the light coffee tablecloth by hand.
+- take the shoes off the shelf with your hand from the green coffee tablecloth.
+- take the shoes off the shelf with your hand from the grey coffee tablecloth.
+- take the shoes off the shelf with your hand on the white table.
+- take the shoes off the shelf with your hand from the white checkered tablecloth.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: shoes
+  level1: clothing
+  level2: shoes
+  level3: null
+  level4: null
+  level5: null
+- object_name: shoe_rack
+  level1: furniture
+  level2: shoe_rack
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: Cobot_Magic
+end_effector_type: two_finger_gripper
