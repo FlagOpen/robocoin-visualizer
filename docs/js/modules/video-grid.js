@@ -121,10 +121,16 @@ export class VideoGridManager {
         existingCards.forEach(card => {
             const path = card.dataset.path;
             if (!visiblePaths.has(path)) {
+                // 取消观察（观察的是 card，不是 video）
+                if (this.videoAutoPlayObserver && card.dataset.videoObserved) {
+                    this.videoAutoPlayObserver.unobserve(card);
+                }
+                // 停止视频播放并清理资源
                 const video = card.querySelector('video');
-                if (video && this.videoAutoPlayObserver) {
-                    this.videoAutoPlayObserver.unobserve(video);
-                    video.dataset.observed = '';
+                if (video) {
+                    video.pause();
+                    video.src = '';
+                    video.srcObject = null;
                 }
                 card.remove();
                 this._videoCardIndex.delete(path);
@@ -303,6 +309,12 @@ export class VideoGridManager {
         const videoUrl = thumbnail.dataset.videoUrl;
         if (!videoUrl) return;
         
+        // 检查元素是否还在 DOM 中
+        if (!thumbnail.isConnected) {
+            delete thumbnail.dataset.videoLoading;
+            return;
+        }
+        
         let video = thumbnail.querySelector('video');
         
         if (!video) {
@@ -322,8 +334,13 @@ export class VideoGridManager {
             thumbnail.insertBefore(video, thumbnail.firstChild);
             
             video.addEventListener('loadeddata', () => {
-                const img = thumbnail.querySelector('.thumbnail-image');
+                // 检查元素是否还在 DOM 中
+                if (!thumbnail.isConnected || !video.isConnected) {
+                    delete thumbnail.dataset.videoLoading;
+                    return;
+                }
                 
+                const img = thumbnail.querySelector('.thumbnail-image');
                 video.style.opacity = '1';
                 if (img) img.style.opacity = '0';
                 
@@ -340,6 +357,11 @@ export class VideoGridManager {
             
             video.load();
         } else {
+            // 检查元素是否还在 DOM 中
+            if (!thumbnail.isConnected || !video.isConnected) {
+                return;
+            }
+            
             if (video.paused) {
                 video.style.opacity = '1';
                 const img = thumbnail.querySelector('.thumbnail-image');
