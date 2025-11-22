@@ -130,6 +130,18 @@
     box-shadow: 0 0.1875rem 0.5rem rgba(108, 117, 125, 0.35);
 }
 
+.btn-selection.secondary:active,
+.btn-selection.secondary.click-animate {
+    background: linear-gradient(135deg, #495057 0%, #3d4146 100%);
+    border-color: #3d4146;
+    box-shadow: 0 0.25rem 0.75rem rgba(108, 117, 125, 0.6);
+}
+
+/* Click animation for selection buttons */
+.btn-selection.secondary.click-animate {
+    animation: buttonClickScale 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* ==================== Selection List ==================== */
 
 .selection-list {

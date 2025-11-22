@@ -107,6 +107,7 @@ export class EventHandlers {
         const resetFiltersBtn = document.getElementById('resetFiltersBtn');
         if (resetFiltersBtn) {
             resetFiltersBtn.addEventListener('click', () => {
+                this.addClickAnimation(resetFiltersBtn);
                 document.getElementById('searchBox').value = '';
                 this.managers.filter.resetFilters();
                 document.dispatchEvent(new CustomEvent('filtersChanged'));
@@ -456,6 +457,28 @@ export class EventHandlers {
     }
     
     /**
+     * Add click animation to button
+     * @param {HTMLElement} button - Button element
+     */
+    addClickAnimation(button) {
+        if (!button) return;
+        
+        // Remove existing animation class if present
+        button.classList.remove('click-animate');
+        
+        // Force reflow to ensure class removal is processed
+        void button.offsetWidth;
+        
+        // Add animation class
+        button.classList.add('click-animate');
+        
+        // Remove class after animation completes (300ms)
+        setTimeout(() => {
+            button.classList.remove('click-animate');
+        }, 300);
+    }
+    
+    /**
      * Bind toolbar button events
      */
     bindToolbarEvents() {
@@ -465,12 +488,14 @@ export class EventHandlers {
         
         if (selectAllBtn) {
             selectAllBtn.addEventListener('click', () => {
+                this.addClickAnimation(selectAllBtn);
                 this.selectAllFiltered();
             });
         }
         
         if (deselectAllBtn) {
             deselectAllBtn.addEventListener('click', () => {
+                this.addClickAnimation(deselectAllBtn);
                 this.deselectAllFiltered();
             });
         }
@@ -482,6 +507,7 @@ export class EventHandlers {
         
         if (addToListBtn) {
             addToListBtn.addEventListener('click', () => {
+                this.addClickAnimation(addToListBtn);
                 this.managers.selectionPanel.addToList();
                 this.managers.videoGrid.updateCardStyles();
                 this.managers.selectionPanel.updateSelectionPanel();
@@ -490,6 +516,7 @@ export class EventHandlers {
         
         if (deleteFromListBtn) {
             deleteFromListBtn.addEventListener('click', () => {
+                this.addClickAnimation(deleteFromListBtn);
                 this.managers.selectionPanel.deleteFromList();
                 this.managers.videoGrid.updateCardStyles();
                 this.managers.selectionPanel.updateSelectionPanel();
@@ -498,6 +525,7 @@ export class EventHandlers {
         
         if (clearListBtn) {
             clearListBtn.addEventListener('click', () => {
+                this.addClickAnimation(clearListBtn);
                 this.managers.selectionPanel.clearList();
                 this.managers.videoGrid.updateCardStyles();
                 this.managers.selectionPanel.updateSelectionPanel();

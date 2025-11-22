@@ -668,18 +668,24 @@
     background: linear-gradient(135deg, #f0f4ff 0%, #e1e8ff 100%);
     border-color: #0969da;
     color: #0969da;
-    transform: scale(1.05);
     box-shadow: 
         0 0.125rem 0.5rem rgba(9, 105, 218, 0.25),
         0 0 0 0.125rem rgba(9, 105, 218, 0.1);
 }
 
-.btn-filter-reset:active {
-    transform: scale(0.98);
+.btn-filter-reset:active,
+.btn-filter-reset.click-animate {
+    background: linear-gradient(135deg, #b8c5ff 0%, #9fb0ff 100%);
+    border-color: #0550ae;
+    color: #0550ae;
     box-shadow: 
-        0 0.0625rem 0.25rem rgba(9, 105, 218, 0.3),
-        inset 0 0.0625rem 0.125rem rgba(9, 105, 218, 0.1);
-    background: linear-gradient(135deg, #e1e8ff 0%, #d0d9ff 100%);
+        0 0.25rem 0.75rem rgba(9, 105, 218, 0.5),
+        0 0 0 0.125rem rgba(9, 105, 218, 0.3);
+}
+
+/* Click animation for reset button */
+.btn-filter-reset.click-animate {
+    animation: buttonClickScale 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Filter Finder - 筛选项搜索 */
