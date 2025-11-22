@@ -58,27 +58,50 @@
     /* ==================== UI Element Parameters ==================== */
     --button-size: 2rem; /* 32px / 16 */
     --icon-size: 1rem; /* 16px / 16 */
-    --border-radius: 0.25rem; /* 4px / 16 */
+    --border-radius: 0.75rem; /* 12px / 16 - Modern rounded */
+    --border-radius-sm: 0.5rem; /* 8px / 16 */
+    --border-radius-lg: 1rem; /* 16px / 16 */
     
-    /* ==================== Color Palette ==================== */
-    /* Primary Orange-Yellow Gradient */
-    --color-primary-start: #ff8c00;
-    --color-primary-end: #ffd700;
-    --gradient-primary: linear-gradient(135deg, var(--color-primary-start) 0%, var(--color-primary-end) 100%);
-    --gradient-primary-dark: linear-gradient(135deg, #e67e00 0%, #e6c200 100%);
+    /* ==================== Color Palette - Warm & Glass ==================== */
+    /* Primary Warm Colors */
+    --color-primary: #ff8a65; /* Warm coral */
+    --color-primary-light: #ffab91;
+    --color-primary-dark: #ff7043;
+    --color-primary-bg: rgba(255, 138, 101, 0.1);
     
-    /* Selection Background (Light Orange-Yellow) - Matches theme colors */
-    --color-selection-bg: linear-gradient(135deg, rgba(255, 140, 0, 0.35) 0%, rgba(255, 215, 0, 0.28) 100%);
-    --color-selection-bg-hover: linear-gradient(135deg, rgba(255, 140, 0, 0.45) 0%, rgba(255, 215, 0, 0.35) 100%);
-    --color-selection-border: var(--color-primary-start);
+    /* Warm Gradient */
+    --gradient-primary: linear-gradient(135deg, #ff8a65 0%, #ffab91 100%);
+    --gradient-primary-dark: linear-gradient(135deg, #ff7043 0%, #ff8a65 100%);
+    --gradient-warm: linear-gradient(135deg, #fff5f0 0%, #ffe8e0 50%, #fff0eb 100%);
     
-    /* Neutral Colors */
-    --color-bg-light: #f6f8fa;
-    --color-bg-gray: #e8ecf0;
-    --color-bg-gray-dark: #d0d7de;
-    --color-text-primary: #2d3748;
-    --color-text-secondary: #4a5568;
-    --color-text-muted: #64748b;
+    /* Glass Effect Colors - Optimized for performance */
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-bg-hover: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(255, 138, 101, 0.2);
+    --glass-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --glass-blur: 10px; /* Reduced blur for performance */
+    
+    /* Selection Background - Warm Glass */
+    --color-selection-bg: rgba(255, 138, 101, 0.15);
+    --color-selection-bg-hover: rgba(255, 138, 101, 0.25);
+    --color-selection-border: var(--color-primary);
+    
+    /* Neutral Warm Colors */
+    --color-bg-base: linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%);
+    --color-bg-light: rgba(255, 245, 240, 0.6);
+    --color-bg-gray: rgba(255, 232, 224, 0.4);
+    --color-bg-gray-dark: rgba(255, 200, 180, 0.3);
+    --color-text-primary: #5d4037;
+    --color-text-secondary: #8d6e63;
+    --color-text-muted: #a1887f;
+    
+    /* Semantic Colors - Warm Tones */
+    --color-success: #81c784;
+    --color-success-hover: #66bb6a;
+    --color-danger: #e57373;
+    --color-danger-hover: #ef5350;
+    --color-warning: #ffb74d;
+    --color-info: #64b5f6;
     
     /* Tooltip */
     --tooltip-bg: rgba(30, 30, 30, 0.95);
