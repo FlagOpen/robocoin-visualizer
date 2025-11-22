@@ -30,7 +30,7 @@
 
     <div class="header-container">
         <div class="header-content">
-            <h1 class="header-title">🤖 RoboCOIN DataManage 📊</h1>
+            <h1 class="header-title">RoboCOIN DataManage</h1>
             <span class="version-badge">v1.0</span>
         </div>
     </div>
@@ -39,17 +39,16 @@
     <div class="filter-control-bar">
         <div class="filter-control-container">
             <button class="filter-trigger-btn" id="filterTriggerBtn">
-                <span class="filter-trigger-icon">⚙️</span>
                 <span class="filter-trigger-text">Filters</span>
                 <span class="filter-trigger-count" id="filterTriggerCount"></span>
             </button>
             
-            <button class="btn-selection secondary" id="resetFiltersBtn">Reset 🔄</button>
+            <button class="btn-selection secondary" id="resetFiltersBtn">Reset</button>
             
             <div class="top-selection-container">
-                <span class="selection-prefix-box">ALL:</span>
-                <button class="btn-toolbar primary" id="selectAllBtn">✅ select</button>
-                <button class="btn-toolbar danger" id="deselectAllBtn">❌ deselect</button>
+                <span class="selection-prefix-box">ALL</span>
+                <button class="btn-toolbar primary" id="selectAllBtn">Select</button>
+                <button class="btn-toolbar danger" id="deselectAllBtn">Deselect</button>
             </div>
             
             <div class="filter-search-container">
@@ -57,9 +56,9 @@
             </div>
             
             <div class="cart-actions-container">
-                <button class="btn-toolbar success" id="addToListBtn">🛒 add</button>
-                <button class="btn-toolbar danger" id="deleteFromListBtn">🗑️ remove</button>
-                <button class="btn-toolbar secondary" id="clearListBtn">🔄 clear</button>
+                <button class="btn-toolbar success" id="addToListBtn">Add</button>
+                <button class="btn-toolbar danger" id="deleteFromListBtn">Remove</button>
+                <button class="btn-toolbar secondary" id="clearListBtn">Clear</button>
             </div>
             
             <div class="filter-stats-inline">
@@ -82,7 +81,7 @@
     <div class="filter-dropdown-overlay" id="filterDropdownOverlay">
         <div class="filter-dropdown" id="filterDropdown">
             <div class="filter-dropdown-header">
-                <h3 class="filter-dropdown-title">🔍 Filter Datasets</h3>
+                <h3 class="filter-dropdown-title">Filter Datasets</h3>
                 <div class="filter-finder">
                     <input type="text" 
                            id="filterFinderInput" 
@@ -116,7 +115,7 @@
         <div class="selection-panel">
             <div class="selection-header">
                 <div class="selection-header-top">
-                    <span class="cart-icon" style="margin-right: 6px;">🛒</span><span id="selectionCount">0</span> items in cart
+                    <span id="selectionCount">0</span> items in cart
                     <input type="file" id="importFile" accept=".json" style="display: none;">
                 </div>
             </div>
@@ -125,8 +124,8 @@
             
             <div class="selection-footer">
                 <div class="selection-actions">
-                    <button class="btn-selection" id="importBtn">📋 import .json</button>
-                    <button class="btn-selection" id="exportBtn">📤 export .json</button>
+                    <button class="btn-selection" id="importBtn">Import JSON</button>
+                    <button class="btn-selection" id="exportBtn">Export JSON</button>
                 </div>
                 <div style="margin-top: 8px; margin-bottom: 8px;">
                     <div style="font-size: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
@@ -140,7 +139,7 @@
                 <div class="code-section-header">
                     <div class="code-section-description">Download command:</div>
                     <div style="position: relative;">
-                        <button class="code-detail-btn" id="codeDetailBtn" title="">ℹ️</button>
+                        <button class="code-detail-btn" id="codeDetailBtn" title="">Info</button>
                         <div class="code-detail-panel" id="codeDetailPanel">
                             <div class="code-detail-content"></div>
                         </div>
@@ -148,7 +147,7 @@
                 </div>
                 <div class="code-output" id="codeOutput"></div>
                 <div class="code-actions">
-                    <button class="btn-selection" id="copyCodeBtn">📋 Copy & Checkout ⬇️</button>
+                    <button class="btn-selection" id="copyCodeBtn">Copy & Checkout</button>
                 </div>
             </div>
         </div>

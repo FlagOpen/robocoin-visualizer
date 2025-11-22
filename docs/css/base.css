@@ -40,12 +40,12 @@ html {
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
-    background: #fafafa;
+    background: #f8fafc;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    color: #24292f;
+    color: var(--color-text-primary);
     transform: scale(0.8);
     transform-origin: 0 0;
     width: 125%;
